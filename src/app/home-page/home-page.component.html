@@ -1,0 +1,14 @@
+<mat-grid-list cols="3" rowHeight="350px">
+  <ng-container *ngFor="let middleware of middlewares">
+    <mat-grid-tile>
+      <div class="grid-item" (click)="goToMiddleware(middleware)">
+        <mat-card>
+          <img mat-card-image src="assets/icons/{{middleware.name}}.png" alt="{{middleware.name}} image">
+          <mat-card-content>
+            <p>{{middleware.name}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

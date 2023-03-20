@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - run: npm install
+      - run: npm install -g @angular/cli
+      - run: ng build
+      - run: tar -czvf paas-dashboard-portal.tar.gz dist/paas-dashboard
+      - name: Release
+        uses: shoothzj/latest-release-action@v1
+        with:
+          files: paas-dashboard-portal.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
