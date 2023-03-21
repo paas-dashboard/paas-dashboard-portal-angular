@@ -7,18 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatCardModule } from "@angular/material/card";
 import { HomePageComponent } from './home-page/home-page.component';
+import { KubernetesInstancesComponent } from './kubernetes/kubernetes-instances/kubernetes-instances.component';
+import { MatTableModule } from "@angular/material/table";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
+    KubernetesInstancesComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule,
+    BrowserModule,
     MatCardModule,
+    MatGridListModule,
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
