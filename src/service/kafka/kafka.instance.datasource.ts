@@ -1,6 +1,7 @@
 import {CollectionViewer, DataSource} from "@angular/cdk/collections";
-import {KafkaInstance} from "../../module/kafka/kafka-instance";
 import {BehaviorSubject, Observable} from "rxjs";
+
+import {KafkaInstance} from "../../module/kafka/kafka-instance";
 import {KafkaService} from "./kafka.service";
 
 export class KafkaInstanceDataSource implements DataSource<KafkaInstance> {

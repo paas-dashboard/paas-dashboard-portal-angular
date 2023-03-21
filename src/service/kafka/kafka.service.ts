@@ -1,8 +1,9 @@
-import BACKEND_HOST from "../../constant";
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {KafkaInstance} from "../../module/kafka/kafka-instance";
 import {Injectable} from "@angular/core";
+import {Observable} from "rxjs";
+
+import BACKEND_HOST from "../../constant";
+import {KafkaInstance} from "../../module/kafka/kafka-instance";
 
 @Injectable({providedIn: "root"})
 export class KafkaService {
