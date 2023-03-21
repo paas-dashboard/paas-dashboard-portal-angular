@@ -1,7 +1,8 @@
 import { CollectionViewer, DataSource } from "@angular/cdk/collections";
+import { BehaviorSubject, Observable } from "rxjs";
+
 import { KubernetesInstance } from "../../module/kubernetes/kubernetes-instance";
 import { KubernetesService } from "./kubernetes.service";
-import { BehaviorSubject, Observable } from "rxjs";
 
 export class KubernetesInstanceDataSource implements DataSource<KubernetesInstance> {
 
