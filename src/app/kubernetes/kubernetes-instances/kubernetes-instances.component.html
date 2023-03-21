@@ -1,7 +1,9 @@
 <mat-table [dataSource]="dataSource">
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
-    <mat-cell *matCellDef="let instance">{{ instance.name }}</mat-cell>
+    <mat-cell *matCellDef="let instance">
+      <a [routerLink]="['/kubernetes', instance.name]">{{ instance.name }}</a>
+    </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="['name']"></mat-header-row>
