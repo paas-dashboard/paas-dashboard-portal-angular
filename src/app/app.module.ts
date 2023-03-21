@@ -10,12 +10,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { KubernetesInstancesComponent } from './kubernetes/kubernetes-instances/kubernetes-instances.component';
 import { MatTableModule } from "@angular/material/table";
 import { HttpClientModule } from "@angular/common/http";
+import { KafkaInstancesComponent } from './kafka/kafka-instances/kafka-instances.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     KubernetesInstancesComponent,
+    KafkaInstancesComponent,
   ],
   imports: [
     AppRoutingModule,
