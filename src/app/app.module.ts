@@ -17,6 +17,8 @@ import { KubernetesInstancesComponent } from './kubernetes/kubernetes-instances/
 import { KubernetesNodesComponent } from './kubernetes/kubernetes-nodes/kubernetes-nodes.component';
 import { KubernetesPodsComponent } from './kubernetes/kubernetes-pods/kubernetes-pods.component';
 import { KubernetesStatefulsetsComponent } from './kubernetes/kubernetes-statefulsets/kubernetes-statefulsets.component';
+import { PulsarInstanceComponent } from './pulsar/pulsar-instance/pulsar-instance.component';
+import { PulsarInstancesComponent } from './pulsar/pulsar-instances/pulsar-instances.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { KubernetesStatefulsetsComponent } from './kubernetes/kubernetes-statefu
     KubernetesNodesComponent,
     KubernetesPodsComponent,
     KubernetesStatefulsetsComponent,
+    PulsarInstanceComponent,
+    PulsarInstancesComponent,
   ],
   imports: [
     AppRoutingModule,
