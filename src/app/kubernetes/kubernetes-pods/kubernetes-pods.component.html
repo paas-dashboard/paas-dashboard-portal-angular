@@ -1,1 +1,17 @@
-<p>kubernetes-pods works!</p>
+<mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>PodName</mat-header-cell>
+    <mat-cell *matCellDef="let v1Pod">
+      <a>{{ v1Pod.metadata.name }}</a>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="creationTimestamp">
+    <mat-header-cell *matHeaderCellDef>CreationTimestamp</mat-header-cell>
+    <mat-cell *matCellDef="let v1Pod">
+      <a>{{ v1Pod.metadata.creationTimestamp }}</a>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="['name', 'creationTimestamp']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['name', 'creationTimestamp']"></mat-row>
+</mat-table>

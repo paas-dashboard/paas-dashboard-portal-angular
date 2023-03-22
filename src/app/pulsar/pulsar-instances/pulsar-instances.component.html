@@ -1,0 +1,29 @@
+<mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let instance">
+      <a>{{ instance.name }}</a>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="host">
+    <mat-header-cell *matHeaderCellDef>host</mat-header-cell>
+    <mat-cell *matCellDef="let instance">
+      <a>{{ instance.host }}</a>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="webPort">
+    <mat-header-cell *matHeaderCellDef>WebPort</mat-header-cell>
+    <mat-cell *matCellDef="let instance">
+      <a>{{ instance.webPort }}</a>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="tcpPort">
+    <mat-header-cell *matHeaderCellDef>TcpPort</mat-header-cell>
+    <mat-cell *matCellDef="let instance">
+      <a>{{ instance.tcpPort }}</a>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="['name', 'host', 'webPort', 'tcpPort']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['name', 'host', 'webPort', 'tcpPort']"></mat-row>
+</mat-table>
