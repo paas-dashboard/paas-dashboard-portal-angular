@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - run: npm install -g @angular/cli
       - run: ng build
-      - run: tar -czvf paas-dashboard-portal.tar.gz dist/paas-dashboard
+      - run: mv dist/paas-dashboard dist/static; tar -czvf paas-dashboard-portal.tar.gz -C dist static
       - name: Release
         uses: shoothzj/latest-release-action@v1
         with:
