@@ -23,6 +23,10 @@ export class HomePageComponent {
 
   constructor(private router: Router) {}
 
+  chatButtonClick() {
+    this.router.navigate(['/chat']);
+  }
+
   goToMiddleware(middleware: Middleware) {
     this.router.navigate([middleware.route]);
   }
