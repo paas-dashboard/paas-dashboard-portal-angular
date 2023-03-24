@@ -1,1 +1,29 @@
-<p>pulsar-instance works!</p>
+<div>
+  <mat-toolbar color="primary">
+    <span>pulsar instance {{ instance }}</span>
+  </mat-toolbar>
+  <section style="background-color: azure">
+    <div>
+      <button mat-raised-button
+              (click)="import_pulsar_file()"
+              color="darkcyan"
+              style="height: 50px; margin-left: 85%">import
+      </button>
+      <button mat-raised-button
+              (click)="export_pulsar_file()"
+              color="darkcyan"
+              style="height: 50px; margin-left: 20px">export
+      </button>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div>
+      <button mat-button mat-dialog-close=""
+              (click)="clean_topic_no_subscription('noSubscription')"
+              color="warn"
+              style="height: 50px; margin-left: 20px">Clear Topic No Subscription
+      </button>
+    </div>
+  </section>
+</div>
