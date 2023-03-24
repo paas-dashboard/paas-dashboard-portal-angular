@@ -2,8 +2,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatLegacyButtonModule } from "@angular/material/legacy-button";
+import {MatListModule} from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
@@ -53,6 +55,8 @@ import { PulsarInstancesComponent } from './pulsar/pulsar-instances/pulsar-insta
     FormsModule,
     MatToolbarModule,
     MatLegacyButtonModule,
+    MatListModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

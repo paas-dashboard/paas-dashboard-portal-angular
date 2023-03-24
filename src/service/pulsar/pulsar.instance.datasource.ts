@@ -25,4 +25,8 @@ export class PulsarInstanceDatasource implements DataSource<PulsarInstance> {
     })
   }
 
+  clean_topic_no_subscription(type: string) {
+    this.pulsarInstanceService.clean_topic_no_subscription(type).subscribe();
+  }
+
 }
