@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from "@angular/router";
 
 import {PulsarInstanceDatasource} from "../../../service/pulsar/pulsar.instance.datasource";
 import {PulsarInstanceFileDatasource} from "../../../service/pulsar/pulsar.instance.file.datasource";
 import {PulsarInstanceService} from "../../../service/pulsar/pulsar.instance.service";
-import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-pulsar-instance',
