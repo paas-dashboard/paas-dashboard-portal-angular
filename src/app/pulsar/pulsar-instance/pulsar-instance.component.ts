@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
 
 import {PulsarInstanceDatasource} from "../../../service/pulsar/pulsar.instance.datasource";
-import {PulsarInstanceFileDatasource} from "../../../service/pulsar/pulsar.instance.file.datasource";
 import {PulsarInstanceService} from "../../../service/pulsar/pulsar.instance.service";
 
 @Component({
@@ -13,14 +12,11 @@ import {PulsarInstanceService} from "../../../service/pulsar/pulsar.instance.ser
 export class PulsarInstanceComponent implements OnInit {
   dataSource: PulsarInstanceDatasource
 
-  importDataSource: PulsarInstanceFileDatasource
-
   instance: string | undefined
 
 
   constructor(private pulsarInstanceService: PulsarInstanceService, private route: ActivatedRoute) {
     this.dataSource = new PulsarInstanceDatasource(pulsarInstanceService)
-    this.importDataSource = new PulsarInstanceFileDatasource(pulsarInstanceService)
   }
   ngOnInit(): void {
     this.dataSource.getPulsarInstance()
