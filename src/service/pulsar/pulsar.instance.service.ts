@@ -15,8 +15,8 @@ export class PulsarInstanceService {
     return this.http.get<PulsarInstance[]>(BACKEND_HOST + "/api/pulsar/instance")
   }
 
-  clean_topic_no_subscription(type: string): Observable<void> {
-    return this.http.post<void>(BACKEND_HOST + "/api/pulsar/instances/instance/clear-inactive-topic?type" + type, null)
+  clean_topic_no_subscription(instance: string, type: string): Observable<void> {
+    return this.http.post<void>(BACKEND_HOST + `/api/pulsar/instances/${instance}/clear-inactive-topic?type` + type, null)
   }
 
 }
