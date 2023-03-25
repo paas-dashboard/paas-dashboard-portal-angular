@@ -17,7 +17,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ChatsComponent } from './chats/chats.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { KafkaConsumerGroupsComponent } from './kafka/kafka-consumer-groups/kafka-consumer-groups.component';
+import { KafkaInstanceComponent } from './kafka/kafka-instance/kafka-instance.component';
 import { KafkaInstancesComponent } from './kafka/kafka-instances/kafka-instances.component';
+import { KafkaTopicsComponent } from './kafka/kafka-topics/kafka-topics.component';
 import { KubernetesDeploymentsComponent } from './kubernetes/kubernetes-deployments/kubernetes-deployments.component';
 import { KubernetesInstanceComponent } from './kubernetes/kubernetes-instance/kubernetes-instance.component';
 import { KubernetesInstancesComponent } from './kubernetes/kubernetes-instances/kubernetes-instances.component';
@@ -41,6 +44,9 @@ import { PulsarInstancesComponent } from './pulsar/pulsar-instances/pulsar-insta
     PulsarInstanceComponent,
     PulsarInstancesComponent,
     ChatsComponent,
+    KafkaTopicsComponent,
+    KafkaConsumerGroupsComponent,
+    KafkaInstanceComponent,
   ],
   imports: [
     AppRoutingModule,
