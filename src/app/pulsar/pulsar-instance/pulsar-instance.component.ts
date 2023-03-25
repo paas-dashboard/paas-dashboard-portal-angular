@@ -25,8 +25,8 @@ export class PulsarInstanceComponent implements OnInit {
     })
   }
 
-  clean_topic_no_subscription(type: string):void {
-    this.dataSource.clean_topic_no_subscription(type)
+  clean_topic_no_subscription():void {
+    this.dataSource.clean_topic_no_subscription(this.instance!, "noSubscription")
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
