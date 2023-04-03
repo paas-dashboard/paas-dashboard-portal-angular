@@ -17,7 +17,7 @@ export class HomePageComponent {
     {name: 'redis', route: '/redis'},
     {name: 'mongo', route: '/mongo'},
     {name: 'kafka', route: '/kafka'},
-    {name: 'kubernetes', route: '/kubernetes'},
+    {name: 'kubernetes', route: '/kubernetes/instances/default'},
     {name: 'rocketmq', route: '/rocketmq'},
   ];
 
