@@ -9,18 +9,18 @@ export interface Middleware {
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
   middlewares: Middleware[] = [
-    {name: 'pulsar', route: '/pulsar'},
-    {name: 'redis', route: '/redis'},
-    {name: 'mongo', route: '/mongo'},
-    {name: 'kafka', route: '/kafka'},
-    {name: 'kubernetes', route: '/kubernetes/instances/default'},
-    {name: 'rocketmq', route: '/rocketmq'},
-    {name: 'cassandra', route: '/cassandra'},
-    {name: 'etcd', route: '/etcd'},
+    { name: 'pulsar', route: '/pulsar' },
+    { name: 'redis', route: '/redis' },
+    { name: 'mongo', route: '/mongo' },
+    { name: 'kafka', route: '/kafka' },
+    { name: 'kubernetes', route: '/kubernetes/instances/default' },
+    { name: 'rocketmq', route: '/rocketmq' },
+    { name: 'cassandra', route: '/cassandra' },
+    { name: 'etcd', route: '/etcd' },
   ];
 
   constructor(private router: Router) {}

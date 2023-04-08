@@ -6,9 +6,14 @@
     <mat-grid-tile>
       <div class="grid-item" (click)="goToMiddleware(middleware)">
         <mat-card>
-          <img mat-card-image style="size: A4" src="assets/icons/{{middleware.name}}.png" alt="{{middleware.name}} image">
+          <img
+            mat-card-image
+            style="size: A4"
+            src="assets/icons/{{ middleware.name }}.png"
+            alt="{{ middleware.name }} image"
+          />
           <mat-card-content>
-            <p>{{middleware.name}}</p>
+            <p>{{ middleware.name }}</p>
           </mat-card-content>
         </mat-card>
       </div>

@@ -1,10 +1,9 @@
 export interface PulsarInstance {
-  name: string
+  name: string;
 
-  host: string
+  host: string;
 
-  webPort: bigint
+  webPort: bigint;
 
-  tcpPort: bigint
-
+  tcpPort: bigint;
 }

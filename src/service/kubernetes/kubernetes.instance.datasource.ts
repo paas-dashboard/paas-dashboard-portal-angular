@@ -1,16 +1,19 @@
-import { CollectionViewer, DataSource } from "@angular/cdk/collections";
-import { BehaviorSubject, Observable } from "rxjs";
+import { CollectionViewer, DataSource } from '@angular/cdk/collections';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-import { KubernetesInstance } from "../../module/kubernetes/kubernetes-instance";
-import { KubernetesService } from "./kubernetes.service";
+import { KubernetesInstance } from '../../module/kubernetes/kubernetes-instance';
+import { KubernetesService } from './kubernetes.service';
 
-export class KubernetesInstanceDataSource implements DataSource<KubernetesInstance> {
-
+export class KubernetesInstanceDataSource
+  implements DataSource<KubernetesInstance>
+{
   private instancesSubject = new BehaviorSubject<KubernetesInstance[]>([]);
 
   constructor(private kubernetesService: KubernetesService) {}
 
-  connect(collectionViewer: CollectionViewer): Observable<KubernetesInstance[]> {
+  connect(
+    collectionViewer: CollectionViewer
+  ): Observable<KubernetesInstance[]> {
     return this.instancesSubject.asObservable();
   }
 
@@ -19,8 +22,10 @@ export class KubernetesInstanceDataSource implements DataSource<KubernetesInstan
   }
 
   getInstances() {
-    this.kubernetesService.getInstances().subscribe((instances: KubernetesInstance[]) => {
-      this.instancesSubject.next(instances);
-    });
+    this.kubernetesService
+      .getInstances()
+      .subscribe((instances: KubernetesInstance[]) => {
+        this.instancesSubject.next(instances);
+      });
   }
 }

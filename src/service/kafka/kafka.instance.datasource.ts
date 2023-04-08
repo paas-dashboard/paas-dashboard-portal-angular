@@ -1,14 +1,13 @@
-import {CollectionViewer, DataSource} from "@angular/cdk/collections";
-import {BehaviorSubject, Observable} from "rxjs";
+import { CollectionViewer, DataSource } from '@angular/cdk/collections';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-import {KafkaInstance} from "../../module/kafka/kafka-instance";
-import {KafkaService} from "./kafka.service";
+import { KafkaInstance } from '../../module/kafka/kafka-instance';
+import { KafkaService } from './kafka.service';
 
 export class KafkaInstanceDataSource implements DataSource<KafkaInstance> {
+  private kafkaInstance = new BehaviorSubject<KafkaInstance[]>([]);
 
-  private kafkaInstance = new BehaviorSubject<KafkaInstance[]>([])
-
-  constructor(private kafkaService : KafkaService) {}
+  constructor(private kafkaService: KafkaService) {}
   connect(collectionViewer: CollectionViewer): Observable<KafkaInstance[]> {
     return this.kafkaInstance.asObservable();
   }
@@ -23,5 +22,4 @@ export class KafkaInstanceDataSource implements DataSource<KafkaInstance> {
       this.kafkaInstance.next(instances);
     });
   }
-
 }

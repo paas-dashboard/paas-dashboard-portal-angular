@@ -15,6 +15,10 @@
     </mat-cell>
   </ng-container>
 
-  <mat-header-row *matHeaderRowDef="['name', 'creationTimestamp']"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: ['name', 'creationTimestamp']"></mat-row>
+  <mat-header-row
+    *matHeaderRowDef="['name', 'creationTimestamp']"
+  ></mat-header-row>
+  <mat-row
+    *matRowDef="let row; columns: ['name', 'creationTimestamp']"
+  ></mat-row>
 </mat-table>
