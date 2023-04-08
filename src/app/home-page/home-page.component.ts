@@ -19,6 +19,8 @@ export class HomePageComponent {
     {name: 'kafka', route: '/kafka'},
     {name: 'kubernetes', route: '/kubernetes/instances/default'},
     {name: 'rocketmq', route: '/rocketmq'},
+    {name: 'cassandra', route: '/cassandra'},
+    {name: 'etcd', route: '/etcd'},
   ];
 
   constructor(private router: Router) {}
