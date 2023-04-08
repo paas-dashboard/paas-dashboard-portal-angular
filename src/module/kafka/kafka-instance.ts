@@ -1,5 +1,5 @@
 export interface KafkaInstance {
-  name: string
+  name: string;
 
-  bootstrapServers: string
+  bootstrapServers: string;
 }
